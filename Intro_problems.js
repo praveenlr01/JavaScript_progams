@@ -13,7 +13,7 @@ function getNameFromEmail(email) {
   r = email.slice(0, email.indexOf("@"));
   res = "";
   for (let i = 0; i < r.length; i++) {
-    if ((Number(r[i]) % 2)!=(1 || 0) && r[i]!=0) {
+    if (Number.isNaN(Number(r[i]))) {
       res += r[i];
     }
   }
